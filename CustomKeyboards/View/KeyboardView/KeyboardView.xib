@@ -147,6 +147,7 @@
                         <constraint firstItem="ekR-L4-lad" firstAttribute="width" secondItem="skg-nz-gyY" secondAttribute="width" id="0WG-KE-F04"/>
                         <constraint firstItem="skg-nz-gyY" firstAttribute="width" secondItem="2hK-85-OI7" secondAttribute="width" multiplier="0.0935" id="1K8-9L-cp6"/>
                         <constraint firstAttribute="bottom" secondItem="ekR-L4-lad" secondAttribute="bottom" constant="1" id="237-aW-lxK"/>
+                        <constraint firstItem="UBw-yb-9Pl" firstAttribute="width" secondItem="skg-nz-gyY" secondAttribute="width" id="23r-6g-Esu"/>
                         <constraint firstItem="G4K-tw-JZv" firstAttribute="leading" secondItem="HBn-7S-nC2" secondAttribute="trailing" constant="2" id="2Vt-Pg-I05"/>
                         <constraint firstAttribute="bottom" secondItem="skg-nz-gyY" secondAttribute="bottom" constant="1" id="7Pl-gs-AYh"/>
                         <constraint firstItem="tzw-cD-uQi" firstAttribute="top" secondItem="2hK-85-OI7" secondAttribute="top" constant="1" id="7yM-ie-Dlx"/>
@@ -343,7 +344,7 @@
                     <rect key="frame" x="0.0" y="110" width="320" height="54"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZb-tM-xaK">
-                            <rect key="frame" x="9.5" y="1" width="29.5" height="52"/>
+                            <rect key="frame" x="9.5" y="1" width="30" height="52"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <state key="normal" image="capsLock">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -354,7 +355,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0BZ-C5-tOJ">
-                            <rect key="frame" x="43" y="1" width="30" height="52"/>
+                            <rect key="frame" x="43.5" y="1" width="29.5" height="52"/>
                             <color key="backgroundColor" white="1" alpha="0.65458333333333329" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <state key="normal" title="Z">
@@ -582,6 +583,7 @@
                 <constraint firstItem="AyU-Ry-fr9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="qUM-rt-aoh"/>
                 <constraint firstItem="zuA-0H-l3U" firstAttribute="top" secondItem="fQd-fP-oi8" secondAttribute="bottom" constant="1" id="qf3-O9-kpJ"/>
                 <constraint firstItem="fQd-fP-oi8" firstAttribute="height" secondItem="2hK-85-OI7" secondAttribute="height" id="rfA-lB-fKm"/>
+                <constraint firstItem="0BZ-C5-tOJ" firstAttribute="width" secondItem="guu-0G-zo5" secondAttribute="width" id="vw8-lR-rKS"/>
                 <constraint firstItem="fQd-fP-oi8" firstAttribute="width" secondItem="2hK-85-OI7" secondAttribute="width" id="w98-Qz-LfN"/>
                 <constraint firstItem="zuA-0H-l3U" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="wJk-ux-VUy"/>
             </constraints>

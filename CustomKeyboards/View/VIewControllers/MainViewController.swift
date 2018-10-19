@@ -12,19 +12,21 @@ import Photos
 class MainViewController: UIViewController {
     
     weak var keyboardView: KeyboardView!
+    @IBOutlet var colorView: ColorView!
     private var imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        colorView.delegate = self
         keyboardView = KeyboardView.instanceFromNib(VC:self)
         keyboardView.isUserInteractionEnabled = false
         self.view.addSubview(keyboardView)
-        
+
         NSLayoutConstraint.activate([
             keyboardView.leftAnchor.constraint(equalTo: view.leftAnchor),
-            keyboardView.topAnchor.constraint(equalTo: view.topAnchor, constant: 70),
+            keyboardView.topAnchor.constraint(equalTo: view.topAnchor),
             keyboardView.rightAnchor.constraint(equalTo: view.rightAnchor),
-            keyboardView.heightAnchor.constraint(equalToConstant: 216)
+            keyboardView.heightAnchor.constraint(equalToConstant: Consts.isIpad ? UIScreen.main.bounds.size.height / 3.5 : UIScreen.main.bounds.size.height / 3)
             ])
         if let userDefaults = UserDefaults(suiteName: "group.com.emojies") {
             keyboardView.backgroundNumber  = userDefaults.integer(forKey: "Background")
@@ -39,7 +41,8 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func fontColorAction(_ sender: Any) {
-        
+        self.view.addSubview(colorView)
+        colorView.animShow()
     }
     
     @IBAction func addCustomBackAction(_ sender: Any) {
@@ -71,6 +74,15 @@ class MainViewController: UIViewController {
             userDefaults.synchronize()
         }
         keyboardView.awakeFromNib()
+    }
+}
+
+extension MainViewController: ColorDelegate {
+    func changeFontColor(color: UIColor) {
+        keyboardView.keyboardButtons.forEach({$0.setTitleColor(color, for: .normal)})
+        if let userDefaults = UserDefaults(suiteName: "group.com.emojies") {
+            userDefaults.set(color, forKey: "Color")
+        }
     }
 }
 

@@ -30,6 +30,7 @@ class KeyboardView: UIView {
         
         keyboardButtons.forEach({$0.layer.cornerRadius = 5.0})
         if let userDefaults = UserDefaults(suiteName: "group.com.emojies") {
+            
             if let userBackground = userDefaults.imageForKey(key: "imageDefaults") {
                 DispatchQueue.main.async {
                     let image = Crop.cropToBounds(image: userBackground, width:  self.frame.size.width, height: self.frame.size.height)
@@ -49,6 +50,13 @@ class KeyboardView: UIView {
                         self.keyboardButtons.forEach({$0.setTitleColor(UIColor.white, for: .highlighted)})
                         self.keyboardButtons.forEach({$0.setTitleColor(UIColor.black, for: .normal)})
                     }
+                }
+            }
+            
+            if let color = userDefaults.color(forKey: "Color") {
+                DispatchQueue.main.async {
+                    self.keyboardButtons.forEach({$0.titleLabel?.textColor = color})
+                    self.keyboardButtons.forEach({$0.setTitleColor(color, for: .normal)})
                 }
             }
         }

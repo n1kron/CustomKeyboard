@@ -6,9 +6,12 @@
 //  Copyright © 2018  Kostantin Zarubin. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Consts {
+    
+    static let isIpad: Bool = UIDevice.current.userInterfaceIdiom == .pad
+    
     static let numbersKeys = ["1", "2", "3","4", "5", "6", "7", "8", "9", "0"]
     static let firstRowSymbols = ["@", "/", ":",";", "(", ")", "$", "&", "-"]
     static let secondRowSymbols = [".", ",", "?","!", "*", "+", "="]

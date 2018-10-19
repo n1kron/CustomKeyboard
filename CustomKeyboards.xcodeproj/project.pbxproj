@@ -30,6 +30,8 @@
 		99D4BAF6216E49ED0099EDFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99D4BAAB216CB47C0099EDFC /* Main.storyboard */; };
 		99F0481721789CBF00D3EB9E /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F0481621789CBF00D3EB9E /* Consts.swift */; };
 		99F0481821789DF200D3EB9E /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F0481621789CBF00D3EB9E /* Consts.swift */; };
+		99F0481A21790CD000D3EB9E /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F0481921790CD000D3EB9E /* ColorView.swift */; };
+		99F0481B21790D1E00D3EB9E /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F0481921790CD000D3EB9E /* ColorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,7 @@
 		99D4BAF1216E3BBE0099EDFC /* ExplanationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplanationsViewController.swift; sourceTree = "<group>"; };
 		99D4BAF2216E3BBE0099EDFC /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		99F0481621789CBF00D3EB9E /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
+		99F0481921790CD000D3EB9E /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +215,7 @@
 		99D4BAD6216CB4FD0099EDFC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				99F0481921790CD000D3EB9E /* ColorView.swift */,
 				99D4BAF0216E3B880099EDFC /* VIewControllers */,
 				99D4BAE9216CB9390099EDFC /* KeyboardView */,
 			);
@@ -428,6 +432,7 @@
 				99D4BAA8216CB47C0099EDFC /* AppDelegate.swift in Sources */,
 				99D4BAF3216E3BBE0099EDFC /* ExplanationsViewController.swift in Sources */,
 				99D4BAEE216CC63B0099EDFC /* KeyboardViewController.swift in Sources */,
+				99F0481A21790CD000D3EB9E /* ColorView.swift in Sources */,
 				99D4BAF4216E3BBE0099EDFC /* InformationViewController.swift in Sources */,
 				992477EC2176614C00E67553 /* Extensions.swift in Sources */,
 			);
@@ -453,6 +458,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99F0481B21790D1E00D3EB9E /* ColorView.swift in Sources */,
 				99D4BAF5216E3FA00099EDFC /* MainViewController.swift in Sources */,
 				99F0481821789DF200D3EB9E /* Consts.swift in Sources */,
 				99D4BADE216CB6EC0099EDFC /* KeyboardViewController.swift in Sources */,

@@ -18,34 +18,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lfn-Y2-qVt">
-                                <rect key="frame" x="0.0" y="500.5" width="375" height="66.5"/>
+                                <rect key="frame" x="0.0" y="467" width="375" height="66.5"/>
                                 <color key="backgroundColor" red="0.3294117647" green="0.73725490199999999" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="Add custom background">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="addCustomBackAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0kP-Ol-ZKL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BeV-BK-p4K">
-                                <rect key="frame" x="0.0" y="423.5" width="375" height="67"/>
+                                <rect key="frame" x="0.0" y="390" width="375" height="67"/>
                                 <color key="backgroundColor" red="0.32941176470588235" green="0.73725490196078436" blue="0.6470588235294118" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="Choose theme">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="themeChooseAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SN8-Jt-COr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csI-GB-j8F">
-                                <rect key="frame" x="0.0" y="577" width="375" height="66.5"/>
+                                <rect key="frame" x="0.0" y="543.5" width="375" height="67"/>
                                 <color key="backgroundColor" red="0.3294117647" green="0.73725490199999999" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="Choose font color">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="fontColorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D3Z-4T-2uu"/>
                                 </connections>
@@ -63,7 +72,7 @@
                             <constraint firstItem="BeV-BK-p4K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Gk6-qz-rED"/>
                             <constraint firstItem="csI-GB-j8F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TtA-s2-Mh0"/>
                             <constraint firstItem="Lfn-Y2-qVt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="U4C-lr-ucg"/>
-                            <constraint firstItem="Lfn-Y2-qVt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.6" id="r78-i3-56U"/>
+                            <constraint firstItem="Lfn-Y2-qVt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.5" id="r78-i3-56U"/>
                             <constraint firstItem="Lfn-Y2-qVt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xcz-Lw-rFT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -81,8 +90,163 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="colorView" destination="VSP-6c-Eya" id="ydL-CJ-66E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="VSP-6c-Eya" customClass="ColorView" customModule="CustomKeyboard" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="371" height="195"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5G-Vi-ijZ">
+                            <rect key="frame" x="10" y="10" width="74" height="33"/>
+                            <color key="backgroundColor" red="0.3294117647" green="0.73725490199999999" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                            <state key="normal" title="Done">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <integer key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                            </variation>
+                            <connections>
+                                <action selector="hideAction:" destination="VSP-6c-Eya" eventType="touchUpInside" id="gfk-on-Nnj"/>
+                            </connections>
+                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Yqz-0c-osq">
+                            <rect key="frame" x="16" y="63.5" width="339" height="48.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5T-Eb-kvX">
+                                    <rect key="frame" x="0.0" y="0.0" width="48" height="48.5"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="C5T-Eb-kvX" secondAttribute="height" multiplier="1:1" id="2Db-F5-pky"/>
+                                    </constraints>
+                                    <connections>
+                                        <action selector="changeColorAction:" destination="VSP-6c-Eya" eventType="touchUpInside" id="UH5-Kl-hPJ"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zR1-Sj-Pqo">
+                                    <rect key="frame" x="58" y="0.0" width="48.5" height="48.5"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <connections>
+                                        <action selector="changeColorAction:" destination="VSP-6c-Eya" eventType="touchUpInside" id="cyT-1K-t9I"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VyZ-I7-Lfg">
+                                    <rect key="frame" x="116.5" y="0.0" width="48" height="48.5"/>
+                                    <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <action selector="changeColorAction:" destination="VSP-6c-Eya" eventType="touchUpInside" id="PpW-RR-EhD"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OTQ-EL-X4m">
+                                    <rect key="frame" x="174.5" y="0.0" width="48" height="48.5"/>
+                                    <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <action selector="changeColorAction:" destination="VSP-6c-Eya" eventType="touchUpInside" id="b6A-Re-ZmE"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HWK-d0-Ea6">
+                                    <rect key="frame" x="232.5" y="0.0" width="48.5" height="48.5"/>
+                                    <color key="backgroundColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <action selector="changeColorAction:" destination="VSP-6c-Eya" eventType="touchUpInside" id="Psa-Pr-6Lt"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kj2-VI-n8m">
+                                    <rect key="frame" x="291" y="0.0" width="48" height="48.5"/>
+                                    <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <action selector="changeColorAction:" destination="VSP-6c-Eya" eventType="touchUpInside" id="HbP-YJ-rJo"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wit-fR-G4H">
+                            <rect key="frame" x="16" y="122" width="339" height="48"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NU6-bw-6cg">
+                                    <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                    <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="NU6-bw-6cg" secondAttribute="height" multiplier="1:1" id="sbT-lc-4Wu"/>
+                                    </constraints>
+                                    <connections>
+                                        <action selector="changeColorAction:" destination="VSP-6c-Eya" eventType="touchUpInside" id="Uz9-u7-vaj"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SzS-M8-jy7">
+                                    <rect key="frame" x="58" y="0.0" width="48.5" height="48"/>
+                                    <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <action selector="changeColorAction:" destination="VSP-6c-Eya" eventType="touchUpInside" id="RLn-0X-OfG"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpv-Sy-7Yg">
+                                    <rect key="frame" x="116.5" y="0.0" width="48" height="48"/>
+                                    <color key="backgroundColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <action selector="changeColorAction:" destination="VSP-6c-Eya" eventType="touchUpInside" id="jcA-Th-fUG"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nR-s5-4Ww">
+                                    <rect key="frame" x="174.5" y="0.0" width="48" height="48"/>
+                                    <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <action selector="changeColorAction:" destination="VSP-6c-Eya" eventType="touchUpInside" id="mo6-AV-4GZ"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gap-yI-mKa">
+                                    <rect key="frame" x="232.5" y="0.0" width="48.5" height="48"/>
+                                    <color key="backgroundColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <action selector="changeColorAction:" destination="VSP-6c-Eya" eventType="touchUpInside" id="55y-TH-4o7"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pWU-jT-rcd">
+                                    <rect key="frame" x="291" y="0.0" width="48" height="48"/>
+                                    <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <action selector="changeColorAction:" destination="VSP-6c-Eya" eventType="touchUpInside" id="HMm-i1-jlU"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.9991557002" green="0.98946720359999996" blue="0.90587037800000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstItem="Yqz-0c-osq" firstAttribute="centerX" secondItem="VSP-6c-Eya" secondAttribute="centerX" id="4b8-Nu-E01"/>
+                        <constraint firstItem="Yqz-0c-osq" firstAttribute="centerY" secondItem="VSP-6c-Eya" secondAttribute="centerY" multiplier="0.9" id="9WV-1s-2zW"/>
+                        <constraint firstItem="e5G-Vi-ijZ" firstAttribute="top" secondItem="Yvn-ao-PuA" secondAttribute="top" constant="10" id="JnR-Zt-wTq"/>
+                        <constraint firstItem="wit-fR-G4H" firstAttribute="centerX" secondItem="VSP-6c-Eya" secondAttribute="centerX" id="N9k-CF-Pc9"/>
+                        <constraint firstItem="wit-fR-G4H" firstAttribute="top" secondItem="Yqz-0c-osq" secondAttribute="bottom" constant="10" id="O7e-sz-6dw"/>
+                        <constraint firstItem="e5G-Vi-ijZ" firstAttribute="width" secondItem="VSP-6c-Eya" secondAttribute="width" multiplier="0.2" id="ROD-e1-ouM"/>
+                        <constraint firstItem="NU6-bw-6cg" firstAttribute="width" secondItem="VSP-6c-Eya" secondAttribute="width" multiplier="0.13" id="l0H-so-8WN"/>
+                        <constraint firstItem="C5T-Eb-kvX" firstAttribute="width" secondItem="VSP-6c-Eya" secondAttribute="width" multiplier="0.13" id="mgz-BF-hCq"/>
+                        <constraint firstItem="e5G-Vi-ijZ" firstAttribute="leading" secondItem="Yvn-ao-PuA" secondAttribute="leading" constant="10" id="pJE-t9-T3E"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="Yvn-ao-PuA"/>
+                    <connections>
+                        <outletCollection property="colorButtons" destination="C5T-Eb-kvX" collectionClass="NSMutableArray" id="XCF-Jk-ewA"/>
+                        <outletCollection property="colorButtons" destination="zR1-Sj-Pqo" collectionClass="NSMutableArray" id="cUs-oy-3eT"/>
+                        <outletCollection property="colorButtons" destination="VyZ-I7-Lfg" collectionClass="NSMutableArray" id="LNf-QR-My0"/>
+                        <outletCollection property="colorButtons" destination="OTQ-EL-X4m" collectionClass="NSMutableArray" id="jFe-Jc-Mmk"/>
+                        <outletCollection property="colorButtons" destination="HWK-d0-Ea6" collectionClass="NSMutableArray" id="6MT-hA-qTt"/>
+                        <outletCollection property="colorButtons" destination="kj2-VI-n8m" collectionClass="NSMutableArray" id="RNb-Pc-foJ"/>
+                        <outletCollection property="colorButtons" destination="NU6-bw-6cg" collectionClass="NSMutableArray" id="dSe-5l-4o2"/>
+                        <outletCollection property="colorButtons" destination="SzS-M8-jy7" collectionClass="NSMutableArray" id="V5o-FN-Pbj"/>
+                        <outletCollection property="colorButtons" destination="fpv-Sy-7Yg" collectionClass="NSMutableArray" id="FsS-nj-jSX"/>
+                        <outletCollection property="colorButtons" destination="0nR-s5-4Ww" collectionClass="NSMutableArray" id="DVt-EB-HqG"/>
+                        <outletCollection property="colorButtons" destination="Gap-yI-mKa" collectionClass="NSMutableArray" id="Nr4-l9-VAI"/>
+                        <outletCollection property="colorButtons" destination="pWU-jT-rcd" collectionClass="NSMutableArray" id="yMN-wE-9Ae"/>
+                    </connections>
+                </view>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>

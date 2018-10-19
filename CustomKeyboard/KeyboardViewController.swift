@@ -33,7 +33,8 @@ class KeyboardViewController: UIInputViewController {
             delegateKeyboardView.leftAnchor.constraint(equalTo: (inputView?.leftAnchor)!),
             delegateKeyboardView.topAnchor.constraint(equalTo: (inputView?.topAnchor)!),
             delegateKeyboardView.rightAnchor.constraint(equalTo: (inputView?.rightAnchor)!),
-            delegateKeyboardView.heightAnchor.constraint(equalToConstant: 216)
+            delegateKeyboardView.bottomAnchor.constraint(equalTo: (inputView?.bottomAnchor)!),
+            delegateKeyboardView.heightAnchor.constraint(equalToConstant: Consts.isIpad ? UIScreen.main.bounds.size.height / 3.5 : UIScreen.main.bounds.size.height / 3)
             ])
         delegateKeyboardView.nextKeyboardButton.addTarget(self, action: #selector(handleInputModeList(from:with:)), for: .allTouchEvents)
     }
