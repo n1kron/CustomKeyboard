@@ -7,99 +7,56 @@
 //
 
 import UIKit
-import Photos
 
 class MainViewController: UIViewController {
     
     weak var keyboardView: KeyboardView!
-    @IBOutlet var colorView: ColorView!
-    private var imagePicker = UIImagePickerController()
+    @IBOutlet weak var alertView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        colorView.delegate = self
         keyboardView = KeyboardView.instanceFromNib(VC:self)
-        keyboardView.isUserInteractionEnabled = false
-        self.view.addSubview(keyboardView)
+    }
+}
 
-        NSLayoutConstraint.activate([
-            keyboardView.leftAnchor.constraint(equalTo: view.leftAnchor),
-            keyboardView.topAnchor.constraint(equalTo: view.topAnchor),
-            keyboardView.rightAnchor.constraint(equalTo: view.rightAnchor),
-            keyboardView.heightAnchor.constraint(equalToConstant: Consts.isIpad ? UIScreen.main.bounds.size.height / 3.5 : UIScreen.main.bounds.size.height / 3)
-            ])
-        if let userDefaults = UserDefaults(suiteName: "group.com.emojies") {
-            keyboardView.backgroundNumber  = userDefaults.integer(forKey: "Background")
-        }
+extension MainViewController: UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return Consts.keyboards.count
     }
     
-    func pickBackgroundImage() {
-        imagePicker.delegate = self
-        imagePicker.sourceType = .savedPhotosAlbum;
-        imagePicker.allowsEditing = false
-        self.present(imagePicker, animated: true, completion: nil)
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "KeyboardCollectionViewCell", for: indexPath) as! KeyboardCollectionViewCell
+        cell.imageView.image = UIImage(named: Consts.keyboards[indexPath.row])
+        return cell
     }
     
-    @IBAction func fontColorAction(_ sender: Any) {
-        self.view.addSubview(colorView)
-        colorView.animShow()
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     }
     
-    @IBAction func addCustomBackAction(_ sender: Any) {
-        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
-            let status = PHPhotoLibrary.authorizationStatus()
-            if status == .notDetermined {
-                PHPhotoLibrary.requestAuthorization({[weak self] status in
-                    if status == .authorized {
-                        self?.pickBackgroundImage()
-                    }
-                })
-            } else if status == .authorized {
-                pickBackgroundImage()
-            } else if status == .denied {
-                  print("deny")
-            }
-        }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: UIScreen.main.bounds.size.width / 2.3, height: UIScreen.main.bounds.size.height / 5)
     }
     
-    @IBAction func themeChooseAction(_ sender: Any) {
-        keyboardView.userBackground = nil
-        keyboardView.backgroundNumber += 1
-        if keyboardView.backgroundNumber == 10 {
-            keyboardView.backgroundNumber = 0
-        }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        UIView.animate(withDuration: 0.25, delay: 0, options: [.curveEaseIn], animations: {
+            self.alertView.alpha = 1.0
+        }, completion: {(_) -> Void in
+            UIView.animate(withDuration: 1, animations: {
+                self.alertView.alpha = 0
+            })
+        })
+        
         if let userDefaults = UserDefaults(suiteName: "group.com.emojies") {
             userDefaults.setImage(image: nil, forKey: "imageDefaults")
-            userDefaults.set(keyboardView.backgroundNumber, forKey: "Background")
+            userDefaults.set(indexPath.row, forKey: "Background")
             userDefaults.synchronize()
-        }
-        keyboardView.awakeFromNib()
-    }
-}
-
-extension MainViewController: ColorDelegate {
-    func changeFontColor(color: UIColor) {
-        keyboardView.keyboardButtons.forEach({$0.setTitleColor(color, for: .normal)})
-        if let userDefaults = UserDefaults(suiteName: "group.com.emojies") {
-            userDefaults.set(color, forKey: "Color")
         }
     }
 }
 
-extension MainViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
-        guard let selectedImage = info[.originalImage] as? UIImage else {
-            fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
-        }
-        keyboardView.userBackground = selectedImage
-        if let userDefaults = UserDefaults(suiteName: "group.com.emojies") {
-            userDefaults.setImage(image: keyboardView.userBackground, forKey: "imageDefaults")
-            keyboardView.awakeFromNib()
-            userDefaults.synchronize()
-        }
-        dismiss(animated: true, completion: nil)
-    }
-}
+
+
+
 

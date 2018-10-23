@@ -10,6 +10,7 @@ import UIKit
 
 protocol ColorDelegate: class {
     func changeFontColor(color: UIColor)
+    func fontButtonEnable()
 }
 
 class ColorView: UIView {
@@ -18,7 +19,7 @@ class ColorView: UIView {
     weak var delegate: ColorDelegate?
     
     override func awakeFromNib() {
-        self.frame = CGRect(x:0, y: UIScreen.main.bounds.size.height, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height / 3)
+        self.frame = CGRect(x:UIScreen.main.bounds.size.width, y: UIScreen.main.bounds.size.height / 2, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height / 3)
         colorButtons.forEach({$0.layer.cornerRadius = 10.0})
         layer.cornerRadius = 5
         layer.masksToBounds = true
@@ -30,7 +31,7 @@ class ColorView: UIView {
     func animShow(){
         UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseIn],
                        animations: {
-                        self.center.y -= self.bounds.height
+                        self.center.x -= self.bounds.width
                         self.layoutIfNeeded()
         }, completion: nil)
         self.isHidden = false
@@ -48,11 +49,12 @@ class ColorView: UIView {
     @IBAction func hideAction(_ sender: Any) {
         UIView.animate(withDuration: 0.5, delay: 0, options: [.curveLinear],
                        animations: {
-                        self.center.y += self.bounds.height
+                        self.center.x += self.bounds.width
                         self.layoutIfNeeded()
                         
         },  completion: {(_ completed: Bool) -> Void in
             self.isHidden = true
         })
+        delegate?.fontButtonEnable()
     }
 }

@@ -24,4 +24,6 @@ class Consts {
     
     static let fourthSymbols = ["[", "]", "{","}", "#", "%", "^", "_", "/", "|"]
     static let fifthSymbols = ["'", "<", ">","☮︎", "∙", "♤", "♧", "♡", "♢"]
+    
+    static let keyboards = ["keyboard0", "keyboard1", "keyboard2","keyboard3", "keyboard4", "keyboard5", "keyboard6", "keyboard7", "keyboard8", "keyboard9"]
 }

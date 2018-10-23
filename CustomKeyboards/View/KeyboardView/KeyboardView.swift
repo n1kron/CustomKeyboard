@@ -19,7 +19,6 @@ class KeyboardView: UIView {
     @IBOutlet var nextKeyboardButton: UIButton!
     @IBOutlet weak var capsLockButton: UIButton!
     
-    var backgroundNumber = 0
     var userBackground: UIImage!
     
     class func instanceFromNib(VC: UIViewController) -> KeyboardView {
@@ -38,7 +37,7 @@ class KeyboardView: UIView {
                 }
             } else {
                 let index = userDefaults.integer(forKey: "Background")
-                let image = Crop.cropToBounds(image: UIImage(named: "background\(index)")!, width:  self.frame.size.width, height: self.frame.size.height)
+                let image = Crop.cropToBounds(image: UIImage(named: "background\(index)")!, width: self.frame.size.width, height: self.frame.size.height)
                 backgroundImage.image = image
                 DispatchQueue.main.async {
                     if index <= 3 {
