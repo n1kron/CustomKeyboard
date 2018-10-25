@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0194512FED37406DA6526D45 /* Pods_CustomKeyboardsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B9E1F023D14110F183A036 /* Pods_CustomKeyboardsUITests.framework */; };
+		10CB0D0F0A6B2D4DED2908A8 /* Pods_CustomKeyboards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AFC30F42E9E1F9F56D4210E /* Pods_CustomKeyboards.framework */; };
+		6D1A8752F1B2CAD1285C03A3 /* Pods_CustomKeyboardsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F47BAEE7931AE7CC9A54071 /* Pods_CustomKeyboardsTests.framework */; };
+		803355261103F136A307AC1F /* Pods_CustomKeyboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F271DCE87D8C5E41E6E227 /* Pods_CustomKeyboard.framework */; };
 		992477EC2176614C00E67553 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992477EB2176614C00E67553 /* Extensions.swift */; };
 		992477ED2176619B00E67553 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992477EB2176614C00E67553 /* Extensions.swift */; };
+		996E239C218205C4005901E7 /* LGButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996E239B218205C4005901E7 /* LGButton.framework */; };
+		996E239E218205EF005901E7 /* LGButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996E239D218205EF005901E7 /* LGButton.framework */; };
 		99D4BAA8216CB47C0099EDFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D4BAA7216CB47C0099EDFC /* AppDelegate.swift */; };
 		99D4BAAA216CB47C0099EDFC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D4BAA9216CB47C0099EDFC /* MainViewController.swift */; };
 		99D4BAAD216CB47C0099EDFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99D4BAAB216CB47C0099EDFC /* Main.storyboard */; };
@@ -77,9 +83,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		06AB8824790D8A13E7BD9673 /* Pods-CustomKeyboardsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomKeyboardsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CustomKeyboardsTests/Pods-CustomKeyboardsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0AFC30F42E9E1F9F56D4210E /* Pods_CustomKeyboards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomKeyboards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F47BAEE7931AE7CC9A54071 /* Pods_CustomKeyboardsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomKeyboardsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30ACA0297B8ED800A385C136 /* Pods-CustomKeyboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomKeyboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CustomKeyboard/Pods-CustomKeyboard.debug.xcconfig"; sourceTree = "<group>"; };
+		6D491A5DCBE591703A5DB58C /* Pods-CustomKeyboards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomKeyboards.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CustomKeyboards/Pods-CustomKeyboards.debug.xcconfig"; sourceTree = "<group>"; };
+		716BEC850737F48627F9CD1A /* Pods-CustomKeyboardsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomKeyboardsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CustomKeyboardsTests/Pods-CustomKeyboardsTests.release.xcconfig"; sourceTree = "<group>"; };
+		71F33B84573A7E5E6C705579 /* Pods-CustomKeyboardsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomKeyboardsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CustomKeyboardsUITests/Pods-CustomKeyboardsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		992477E92174ECF700E67553 /* CustomKeyboards.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CustomKeyboards.entitlements; sourceTree = "<group>"; };
 		992477EA2174ED0000E67553 /* CustomKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CustomKeyboard.entitlements; sourceTree = "<group>"; };
 		992477EB2176614C00E67553 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		996E239B218205C4005901E7 /* LGButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LGButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		996E239D218205EF005901E7 /* LGButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LGButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99D4BAA4216CB47C0099EDFC /* CustomKeyboards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomKeyboards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99D4BAA7216CB47C0099EDFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99D4BAA9216CB47C0099EDFC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +119,11 @@
 		99F0481921790CD000D3EB9E /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
 		99F0481C217B7ACD00D3EB9E /* CustomizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizationViewController.swift; sourceTree = "<group>"; };
 		99F0481E217B80D200D3EB9E /* Cells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
+		A3B9E1F023D14110F183A036 /* Pods_CustomKeyboardsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomKeyboardsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7F271DCE87D8C5E41E6E227 /* Pods_CustomKeyboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomKeyboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C14168FEE8B5B3893702C31B /* Pods-CustomKeyboards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomKeyboards.release.xcconfig"; path = "Pods/Target Support Files/Pods-CustomKeyboards/Pods-CustomKeyboards.release.xcconfig"; sourceTree = "<group>"; };
+		E1D5AF64C3CF8F8FC6D4DE30 /* Pods-CustomKeyboardsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomKeyboardsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CustomKeyboardsUITests/Pods-CustomKeyboardsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F2F6C11E4899F2C1DAE3C2EE /* Pods-CustomKeyboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomKeyboard.release.xcconfig"; path = "Pods/Target Support Files/Pods-CustomKeyboard/Pods-CustomKeyboard.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +131,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				996E239C218205C4005901E7 /* LGButton.framework in Frameworks */,
+				10CB0D0F0A6B2D4DED2908A8 /* Pods_CustomKeyboards.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D1A8752F1B2CAD1285C03A3 /* Pods_CustomKeyboardsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0194512FED37406DA6526D45 /* Pods_CustomKeyboardsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,12 +156,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				996E239E218205EF005901E7 /* LGButton.framework in Frameworks */,
+				803355261103F136A307AC1F /* Pods_CustomKeyboard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13C8F7E728B94FFF5628C63C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				996E239D218205EF005901E7 /* LGButton.framework */,
+				996E239B218205C4005901E7 /* LGButton.framework */,
+				A7F271DCE87D8C5E41E6E227 /* Pods_CustomKeyboard.framework */,
+				0AFC30F42E9E1F9F56D4210E /* Pods_CustomKeyboards.framework */,
+				1F47BAEE7931AE7CC9A54071 /* Pods_CustomKeyboardsTests.framework */,
+				A3B9E1F023D14110F183A036 /* Pods_CustomKeyboardsUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		337E01FC27FD7120ACCD5595 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				30ACA0297B8ED800A385C136 /* Pods-CustomKeyboard.debug.xcconfig */,
+				F2F6C11E4899F2C1DAE3C2EE /* Pods-CustomKeyboard.release.xcconfig */,
+				6D491A5DCBE591703A5DB58C /* Pods-CustomKeyboards.debug.xcconfig */,
+				C14168FEE8B5B3893702C31B /* Pods-CustomKeyboards.release.xcconfig */,
+				06AB8824790D8A13E7BD9673 /* Pods-CustomKeyboardsTests.debug.xcconfig */,
+				716BEC850737F48627F9CD1A /* Pods-CustomKeyboardsTests.release.xcconfig */,
+				E1D5AF64C3CF8F8FC6D4DE30 /* Pods-CustomKeyboardsUITests.debug.xcconfig */,
+				71F33B84573A7E5E6C705579 /* Pods-CustomKeyboardsUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		992477E72174D30C00E67553 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +216,8 @@
 				99D4BABB216CB47F0099EDFC /* CustomKeyboardsTests */,
 				99D4BAC6216CB47F0099EDFC /* CustomKeyboardsUITests */,
 				99D4BAA5216CB47C0099EDFC /* Products */,
+				337E01FC27FD7120ACCD5595 /* Pods */,
+				13C8F7E728B94FFF5628C63C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -266,10 +322,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 99D4BACC216CB47F0099EDFC /* Build configuration list for PBXNativeTarget "CustomKeyboards" */;
 			buildPhases = (
+				BB24DAD321574D393C1F06B4 /* [CP] Check Pods Manifest.lock */,
 				99D4BAA0216CB47C0099EDFC /* Sources */,
 				99D4BAA1216CB47C0099EDFC /* Frameworks */,
 				99D4BAA2216CB47C0099EDFC /* Resources */,
 				99D4BAE6216CB6EC0099EDFC /* Embed App Extensions */,
+				41DE8A9BF8E69A797F9DC332 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -285,6 +343,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 99D4BACF216CB47F0099EDFC /* Build configuration list for PBXNativeTarget "CustomKeyboardsTests" */;
 			buildPhases = (
+				E5B1FBF76DF94BBEF5DF06B0 /* [CP] Check Pods Manifest.lock */,
 				99D4BAB4216CB47F0099EDFC /* Sources */,
 				99D4BAB5216CB47F0099EDFC /* Frameworks */,
 				99D4BAB6216CB47F0099EDFC /* Resources */,
@@ -303,6 +362,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 99D4BAD2216CB47F0099EDFC /* Build configuration list for PBXNativeTarget "CustomKeyboardsUITests" */;
 			buildPhases = (
+				D06A7AC494E0BAED46128CE7 /* [CP] Check Pods Manifest.lock */,
 				99D4BABF216CB47F0099EDFC /* Sources */,
 				99D4BAC0216CB47F0099EDFC /* Frameworks */,
 				99D4BAC1216CB47F0099EDFC /* Resources */,
@@ -321,6 +381,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 99D4BAE3216CB6EC0099EDFC /* Build configuration list for PBXNativeTarget "CustomKeyboard" */;
 			buildPhases = (
+				CC2219124BED152B561614A2 /* [CP] Check Pods Manifest.lock */,
 				99D4BAD7216CB6EC0099EDFC /* Sources */,
 				99D4BAD8216CB6EC0099EDFC /* Frameworks */,
 				99D4BAD9216CB6EC0099EDFC /* Resources */,
@@ -428,6 +489,100 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		41DE8A9BF8E69A797F9DC332 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CustomKeyboards/Pods-CustomKeyboards-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/LGButton-iOS10.0/LGButton.framework",
+				"${BUILT_PRODUCTS_DIR}/LGButton-iOS12.0/LGButton.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LGButton.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CustomKeyboards/Pods-CustomKeyboards-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB24DAD321574D393C1F06B4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CustomKeyboards-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC2219124BED152B561614A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CustomKeyboard-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D06A7AC494E0BAED46128CE7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CustomKeyboardsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5B1FBF76DF94BBEF5DF06B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CustomKeyboardsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		99D4BAA0216CB47C0099EDFC /* Sources */ = {
@@ -637,6 +792,7 @@
 		};
 		99D4BACD216CB47F0099EDFC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D491A5DCBE591703A5DB58C /* Pods-CustomKeyboards.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = NO;
@@ -659,6 +815,7 @@
 		};
 		99D4BACE216CB47F0099EDFC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C14168FEE8B5B3893702C31B /* Pods-CustomKeyboards.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = NO;
@@ -681,6 +838,7 @@
 		};
 		99D4BAD0216CB47F0099EDFC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06AB8824790D8A13E7BD9673 /* Pods-CustomKeyboardsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -702,6 +860,7 @@
 		};
 		99D4BAD1216CB47F0099EDFC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 716BEC850737F48627F9CD1A /* Pods-CustomKeyboardsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -723,6 +882,7 @@
 		};
 		99D4BAD3216CB47F0099EDFC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1D5AF64C3CF8F8FC6D4DE30 /* Pods-CustomKeyboardsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -743,6 +903,7 @@
 		};
 		99D4BAD4216CB47F0099EDFC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71F33B84573A7E5E6C705579 /* Pods-CustomKeyboardsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -763,6 +924,7 @@
 		};
 		99D4BAE4216CB6EC0099EDFC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30ACA0297B8ED800A385C136 /* Pods-CustomKeyboard.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = CustomKeyboard/CustomKeyboard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -783,6 +945,7 @@
 		};
 		99D4BAE5216CB6EC0099EDFC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2F6C11E4899F2C1DAE3C2EE /* Pods-CustomKeyboard.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = CustomKeyboard/CustomKeyboard.entitlements;
 				CODE_SIGN_STYLE = Automatic;

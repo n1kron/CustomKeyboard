@@ -20,13 +20,14 @@ class KeyboardView: UIView {
     @IBOutlet weak var capsLockButton: UIButton!
     
     var userBackground: UIImage!
+    var font: UIFont!
     
     class func instanceFromNib(VC: UIViewController) -> KeyboardView {
         return UINib(nibName: "KeyboardView", bundle: nil).instantiate(withOwner: VC, options: nil)[0] as! KeyboardView
     }
     
     override func awakeFromNib() {
-        
+        keyboardButtons.forEach({$0.titleLabel?.font = font})
         keyboardButtons.forEach({$0.layer.cornerRadius = 5.0})
         if let userDefaults = UserDefaults(suiteName: "group.com.emojies") {
             

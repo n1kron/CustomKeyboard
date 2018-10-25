@@ -25,11 +25,10 @@ class ColorView: UIView {
         layer.masksToBounds = true
         layer.borderColor = UIColor.black.cgColor
         layer.borderWidth = 1
-        
     }
     
-    func animShow(){
-        UIView.animate(withDuration: 0.5, delay: 0, options: [.curveEaseIn],
+    func animShow() {
+        UIView.animate(withDuration: 0.5, delay: 0,
                        animations: {
                         self.center.x -= self.bounds.width
                         self.layoutIfNeeded()
@@ -47,7 +46,7 @@ class ColorView: UIView {
     }
     
     @IBAction func hideAction(_ sender: Any) {
-        UIView.animate(withDuration: 0.5, delay: 0, options: [.curveLinear],
+        UIView.animate(withDuration: 0.5, delay: 0,
                        animations: {
                         self.center.x += self.bounds.width
                         self.layoutIfNeeded()

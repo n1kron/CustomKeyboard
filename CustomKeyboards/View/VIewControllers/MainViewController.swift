@@ -35,7 +35,7 @@ extension MainViewController: UICollectionViewDelegate,UICollectionViewDataSourc
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: UIScreen.main.bounds.size.width / 2.3, height: UIScreen.main.bounds.size.height / 5)
+        return Consts.isIpad ? CGSize(width: UIScreen.main.bounds.size.width / 2.3, height: UIScreen.main.bounds.size.height / 5) : CGSize(width: UIScreen.main.bounds.size.width / 2.25, height: UIScreen.main.bounds.size.height / 5)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

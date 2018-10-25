@@ -7,17 +7,15 @@
 //
 
 import UIKit
+import LGButton
 
 class ExplanationsViewController: UIViewController {
     
-    @IBOutlet var explanationButtons: [UIButton]!
+    @IBOutlet var explanationButtons: LGButton!
     @IBOutlet var explanationLabels: [UILabel]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        for button in explanationButtons {
-            button.layer.cornerRadius = 10.0
-        }
     }
     
     @IBAction func setupAction(_ sender: Any) {

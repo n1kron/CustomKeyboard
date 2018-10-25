@@ -17,6 +17,8 @@ class InformationViewController: UIViewController {
         super.viewDidLoad()
         for button in infoButtons {
             button.layer.cornerRadius = 10
+            button.layer.borderColor = button.titleLabel?.textColor.cgColor
+            button.layer.borderWidth = 2.0
         }
     }
     

@@ -8,13 +8,16 @@
 
 import UIKit
 import Photos
+import LGButton
 
 class CustomizationViewController: UIViewController {
     
-    weak var keyboardView: KeyboardView!
     @IBOutlet var colorView: ColorView!
-    @IBOutlet weak var fontButton: UIButton!
+    @IBOutlet weak var fontButton: LGButton!
+    
     private var imagePicker = UIImagePickerController()
+    weak var keyboardView: KeyboardView!
+    var fontCount = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +25,14 @@ class CustomizationViewController: UIViewController {
         
         keyboardView = KeyboardView.instanceFromNib(VC:self)
         keyboardView.isUserInteractionEnabled = false
+        keyboardView.clipsToBounds = true
+        keyboardView.layer.borderWidth = 1.0
+        keyboardView.layer.borderColor = UIColor.blue.cgColor
         self.view.addSubview(keyboardView)
         
         NSLayoutConstraint.activate([
             keyboardView.leftAnchor.constraint(equalTo: view.leftAnchor),
-            keyboardView.topAnchor.constraint(equalTo: view.topAnchor, constant: 70),
+            keyboardView.topAnchor.constraint(equalTo: view.topAnchor, constant: 30),
             keyboardView.rightAnchor.constraint(equalTo: view.rightAnchor),
             keyboardView.heightAnchor.constraint(equalToConstant: Consts.isIpad ? UIScreen.main.bounds.size.height / 3.5 : UIScreen.main.bounds.size.height / 3)
         ])
@@ -59,6 +65,15 @@ class CustomizationViewController: UIViewController {
                 print("deny")
             }
         }
+    }
+    
+    @IBAction func changeFont(_ sender: Any) {
+        fontCount += 1
+        if fontCount == 2 {
+            fontCount = 0
+        }
+        keyboardView.font = UIFont(name: Consts.fonts[fontCount], size: 20)
+        keyboardView.awakeFromNib()
     }
     
     @IBAction func fontColorAction(_ sender: Any) {

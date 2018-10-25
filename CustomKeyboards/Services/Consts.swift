@@ -12,6 +12,8 @@ class Consts {
     
     static let isIpad: Bool = UIDevice.current.userInterfaceIdiom == .pad
     
+    static let fonts = ["HelveticaNeue-Bold", "HelveticaNeue-Italic"]
+    
     static let numbersKeys = ["1", "2", "3","4", "5", "6", "7", "8", "9", "0"]
     static let firstRowSymbols = ["@", "/", ":",";", "(", ")", "$", "&", "-"]
     static let secondRowSymbols = [".", ",", "?","!", "*", "+", "="]
